@@ -1,25 +1,22 @@
+import time
 
-class Point:
-    num_points = 0
-    def __init__(self, xcor, ycor):
-        self.x = xcor
-        self.y = ycor
-        Point.num_points += 1
+class Animal:
+    current_id = 1
+    def __init__(self, n, t="Dog"):
+        self.name = n
+        self.type = t
+        #self.id = id(self)
+        self.id = self.current_id
+        Animal.current_id += 1
+        self.arrived = time.strftime("%d/%m/%Y")
+        self.adopted = None
 
-
-    def distanceFromOrigin(self):
-        return ((self.x ** 2) + (self.y**2)) ** 0.5
-
-    def halfway(self, other):
-        self.x = (self.x + other.x) / 2
-        self.y = (self.y + other.y) / 2
-
+    def adopt(self):
+        if(self.adopted == None):
+            self.adopted = time.strftime("%d/%m/%Y")
 
 def main():
-    p1 = Point(3, 5)
-    p2 = Point(2, 7)
-    p3 = Point(2, 7)
-    print(p1.num_points)
-    print(p2.num_points)
-    print(p3.num_points)
+    zelda = Animal("Zelda")
+    sonic = Animal("sonic", "Hedgehog")
+
 main()

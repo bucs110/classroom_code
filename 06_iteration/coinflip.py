@@ -2,6 +2,18 @@ import random
 import turtle
 
 def isInScreen(wn, t):
+    left = -(wn.window_width()/2)
+    right = wn.window_width()/2
+    bottom = -(wn.window_height()/2)
+    top = wn.window_height()/2
+
+    x = t.xcor()
+    y = t.ycor()
+
+    if(x > right or x < left):
+        return False
+    if(y > top or y < bottom):
+        return False
     return True
 
 def main():

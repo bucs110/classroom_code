@@ -7,5 +7,11 @@ def main():
         i = i * 10
         count += i
 
+    count = 0
+    i = 0
+    while i < 4:
+        j = i * 10
+        count += j
+
 
 main()

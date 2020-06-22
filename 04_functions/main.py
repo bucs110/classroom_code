@@ -1,21 +1,25 @@
-
-
-def mult(x,y):
-    accum = 0
-    for i in range(y):
-        accum = accum + x
-    return accum
-
-def exp(x, y):
-    accum = 1
-    for i in range(y):
-        accum = accum * x
-    return accum
+#
+# #Accumulator Pattern
+# accumulator = starting_value
+# for i in list:
+#     #code
+#     accumulator = accumulator + increment
+#     #code
 
 def square(x):
-    return mult(x, x)
+    #docstrings
+    '''
+        this function squares stuff
+        args: (int) to be squared
+        return: (int)
+    '''
+    runningtotal = 0
+    for counter in range(x):
+        runningtotal = runningtotal + x
+    return runningtotal
 
-#driver
-def main():
-
+def main(): #driver
+    to_square = 10
+    result = square(to_square)
+    print(result)
 main()

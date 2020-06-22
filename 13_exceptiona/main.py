@@ -1,21 +1,25 @@
-
 class MyException(Exception):
     pass
 class MyOtherException(Exception):
     pass
-def bar(num):
-    if(num < 0):
+
+def bar():
+    num = int(input("Please enter a number other than 5"))
+    if num == 5:
         raise MyException()
-    elif(num > 10):
+    elif num == 3:
         raise MyOtherException()
+
 def foo():
-    bar(-1)
+    bar()
 
 def main():
     try:
         foo()
     except MyException:
-        print("too low")
+        print("bar bad")
     except MyOtherException:
-        print("too high")
+        print("bar bad again")
+
+
 main()

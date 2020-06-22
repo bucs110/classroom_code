@@ -1,15 +1,18 @@
-import turtle
+#modules
+import random
+import turtle #gui library
+#namespacing
+window = turtle.Screen()
+michelangelo = turtle.Turtle()
+michelangelo.shape("turtle")
+michelangelo.color("orange")
+michelangelo.forward(50)
+michelangelo.left(60)
+michelangelo.forward(50)
+michelangelo.setpos(0, 0)
+window.exitonclick()
 
-mylist = range(10)
-print(list(mylist))
-mylist = range(2, 10)
-print(list(mylist))
-mylist = range(2, 10, 2)
-print(list(mylist))
-
-for i in range(100):
-    print(i)
-
-# modules
+#Two Programming Principles
 # DRY: Don't Repeat Yourself
-# Write Re-use
+# Write for Reuse: Write generic code that
+# can be used in many situations

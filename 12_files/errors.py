@@ -1,3 +1,0 @@
-Heloo
-WorldGoodbye
-World

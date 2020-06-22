@@ -1,22 +1,24 @@
-import time
 
 class Animal:
-    current_id = 1
-    def __init__(self, n, t="Dog"):
-        self.name = n
-        self.type = t
-        #self.id = id(self)
-        self.id = self.current_id
-        Animal.current_id += 1
-        self.arrived = time.strftime("%d/%m/%Y")
-        self.adopted = None
+    uID = 1
 
-    def adopt(self):
-        if(self.adopted == None):
-            self.adopted = time.strftime("%d/%m/%Y")
+    def __init__(self, name, type="dog"):
+        self.name = name
+        self.type = type
+        Animal.uID = Animal.uID + 1
+        self.ID = Animal.uID
+        self.arrival = time.strtime("%d/%m/%y")
+        self.departure = None
 
-def main():
-    zelda = Animal("Zelda")
-    sonic = Animal("sonic", "Hedgehog")
+    def adopted (self):
+        if(self.departure == None):
+            self.departure = time.strtime("%d/%m/%y")
 
-main()
+    def bark(self):
+        print("bark")
+
+fido = Animal("Fido")
+#3 days later
+fido.adoption()
+mittens = Animal("Mittens", "Cat")
+del mittens

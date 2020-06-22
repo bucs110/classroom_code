@@ -1,11 +1,8 @@
-import requests
+import urllib.request
 
 def main():
-    try:
-        contents = requests.get("http://api.ipify.org?format=json")
-        data = contents.json()
-    except:
-        print("Resource not available")
-    else:
-        print(data)
+    """https://opentdb.com/api.php?amount=1&category=18"""
+    with urllib.request.urlopen("http://icanhazip.com") as netref:
+        trivia_question = netref.read()
+        print(trivia_question.decode('utf-8'))
 main()
